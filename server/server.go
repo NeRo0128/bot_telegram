@@ -21,10 +21,7 @@ import (
 // It also has a source command, which sends the bot sourcecode, as a file.
 func LoadServer() error {
 
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Error cargando el archivo .env: %v", err)
-	}
+	
 	//Get token from the environment variable
 	token := os.Getenv("BOT_TOKEN")
 	if token == "" {
